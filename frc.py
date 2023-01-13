@@ -24,7 +24,7 @@ with st.container():
     st.markdown("<h1 style='text-align: ; color: black;'>Restaurant Dish Recommendation</h1>", unsafe_allow_html=True)
 
 # LOADING ORDERS
-order = pickle.load(open("orders.pkl","rb"))
+order = pickle.load(open("https://github.com/krsunil17/restaurant_dishes_recommendation/blob/rajrrc/orders.pkl","rb"))
 
 # REGULAR CUSTOMER
 
@@ -43,7 +43,7 @@ with st.container():
             st.write(i)
 
 # RECOMMENDING DISHES FOR REGULAR CUSTOMERS 
-    recommended_dishes = pickle.load(open("recommendations.pkl", "rb"))
+    recommended_dishes = pickle.load(open("https://github.com/krsunil17/restaurant_dishes_recommendation/blob/rajrrc/recommendations.pkl", "rb"))
     def recommendations(id):
       point =recommended_dishes[recommended_dishes.values == id].values.tolist()
       a1=point[0][2:]
@@ -57,9 +57,9 @@ with st.container():
 with et_column:
     st.markdown("**<h2 style='text-align: center; color: black;'>New Customer</h2>**", unsafe_allow_html=True)
 
-    food_list = pickle.load(open('food.pkl', 'rb'))
+    food_list = pickle.load(open('https://github.com/krsunil17/restaurant_dishes_recommendation/blob/rajrrc/food.pkl', 'rb'))
     data = pd.DataFrame(food_list)
-    similarity = pickle.load(open('similarity.pkl', 'rb'))
+    similarity = pickle.load(open('https://github.com/krsunil17/restaurant_dishes_recommendation/blob/rajrrc/similarity.pkl', 'rb'))
     
     
     def recommend(food):
